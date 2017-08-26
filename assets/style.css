@@ -3,10 +3,9 @@ body {
 	padding: 0;
 }
 .center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 ul {
 	margin: 0;
@@ -26,7 +25,7 @@ ul li {
 	left: 50%;
 	border-bottom-color: transparent !important; 
 	border-left-color: transparent !important; 
-	animation: animate 5s infinite alternate;
+	animation: load 5s infinite alternate;
 	transform: translate(-50%, -50%);
 }
 ul li:nth-child(1) {	
@@ -71,12 +70,11 @@ ul li:nth-child(7) {
 	border-color: #c996fd;
 	animation-delay: 1.4s;
 }
-@keyframes animate {
+@keyframes load {
 	0% {
 		transform: translate(-50%, -50%) rotate(-35deg);
 	}
 	100% {
 		transform: translate(-50%, -50%) rotate(315deg);
 	}
-
 }
